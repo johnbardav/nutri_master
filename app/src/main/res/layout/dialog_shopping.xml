@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/shopping_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+    <EditText android:id="@+id/shopping_manual" style="@style/NM.Input" android:inputType="textCapSentences" android:hint="@string/manual_item" android:maxLength="300"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/shopping_add" style="@style/NM.Button" android:text="@string/add"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/shopping_list" android:layout_width="match_parent" android:layout_height="300dp" android:scrollbars="vertical"/>
+    <TextView android:id="@+id/shopping_empty" style="@style/NM.Body"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/shopping_clear" style="@style/NM.Outline" android:text="@string/clear_completed"/>
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/profile_edit_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+    <TextView android:id="@+id/label_name" style="@style/NM.Caption" android:text="@string/name" android:labelFor="@id/edit_name"/>
+    <EditText android:id="@+id/edit_name" style="@style/NM.Input" android:inputType="textPersonName" android:maxLength="2000"/>
+    <TextView android:id="@+id/label_role" style="@style/NM.Caption" android:text="@string/role" android:labelFor="@id/edit_role"/>
+    <EditText android:id="@+id/edit_role" style="@style/NM.Input" android:inputType="textCapSentences" android:maxLength="2000"/>
+    <TextView android:id="@+id/label_education" style="@style/NM.Caption" android:text="@string/education" android:labelFor="@id/edit_education"/>
+    <EditText android:id="@+id/edit_education" style="@style/NM.Input" android:inputType="textMultiLine" android:maxLength="2000"/>
+    <TextView android:id="@+id/label_experience" style="@style/NM.Caption" android:text="@string/experience" android:labelFor="@id/edit_experience"/>
+    <EditText android:id="@+id/edit_experience" style="@style/NM.Input" android:inputType="textMultiLine" android:maxLength="2000"/>
+    <TextView android:id="@+id/label_bio" style="@style/NM.Caption" android:text="@string/bio" android:labelFor="@id/edit_bio"/>
+    <EditText android:id="@+id/edit_bio" style="@style/NM.Input" android:inputType="textMultiLine" android:maxLength="2000"/>
+    <TextView android:id="@+id/profile_edit_error" style="@style/NM.Body" android:textColor="@color/danger" android:visibility="gone" android:focusable="true" android:accessibilityLiveRegion="assertive"/>
+  </LinearLayout>
+</ScrollView>

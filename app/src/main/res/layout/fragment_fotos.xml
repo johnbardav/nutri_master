@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface">
+  <ScrollView android:id="@+id/gallery_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+      <TextView android:id="@+id/gallery_title_eyebrow" style="@style/NM.Eyebrow" android:text="@string/gallery_kicker"/>
+      <TextView android:id="@+id/gallery_title_heading" style="@style/NM.Title" android:text="@string/fotos_titulo" android:layout_marginBottom="16dp"/>
+      <EditText android:id="@+id/recipe_search" style="@style/NM.Input" android:inputType="text" android:hint="@string/search_hint" android:imeOptions="actionSearch" android:singleLine="true"/>
+      <TextView android:id="@+id/category_label" style="@style/NM.Caption" android:text="@string/category_label" android:labelFor="@id/category_filter"/>
+      <Spinner android:id="@+id/category_filter" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:padding="8dp" android:layout_marginTop="6dp" android:layout_marginBottom="10dp"/>
+      <TextView android:id="@+id/collection_label" style="@style/NM.Caption" android:text="@string/filter_label" android:labelFor="@id/collection_filter"/>
+      <Spinner android:id="@+id/collection_filter" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:padding="8dp" android:layout_marginTop="6dp" android:layout_marginBottom="10dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/create_recipe" style="@style/NM.Outline" android:text="@string/new_recipe"/>
+      <TextView android:id="@+id/gallery_count" style="@style/NM.Caption" android:layout_marginTop="10dp" android:layout_marginBottom="8dp"/>
+      <TextView style="@style/NM.Caption" android:text="@string/gallery_display_mode"/>
+      <RadioGroup android:id="@+id/gallery_display_mode" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:checkedButton="@id/gallery_mode_list">
+        <RadioButton android:id="@+id/gallery_mode_list" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/gallery_list" android:textSize="12sp"/>
+        <RadioButton android:id="@+id/gallery_mode_grid" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/gallery_grid" android:textSize="12sp"/>
+      </RadioGroup>
+      <ListView android:id="@+id/lstFotos" android:layout_width="match_parent" android:layout_height="240dp" android:scrollbars="vertical" android:divider="@color/line" android:dividerHeight="1dp" android:background="@color/white" android:choiceMode="singleChoice"/>
+      <androidx.recyclerview.widget.RecyclerView android:id="@+id/recipe_grid" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" android:scrollbars="vertical"/>
+      <TextView android:id="@+id/gallery_empty" style="@style/NM.Body" android:text="@string/empty_recipes" android:visibility="gone" android:padding="12dp"/>
+      <LinearLayout android:id="@+id/recipe_detail_card" style="@style/NM.Card" android:layout_marginTop="16dp">
+        <ImageView android:id="@+id/imgFotoDetalle" android:src="@drawable/receta1" android:layout_width="match_parent" android:layout_height="160dp" android:scaleType="centerCrop" android:contentDescription="@string/fotos_detalle" android:layout_marginBottom="12dp"/>
+        <TextView android:id="@+id/recipe_title" style="@style/NM.Heading"/>
+        <TextView android:id="@+id/recipe_meta" style="@style/NM.Caption" android:layout_marginTop="6dp"/>
+        <TextView android:id="@+id/txtDescripcionFoto" android:text="@string/fotos_instruccion" style="@style/NM.Body" android:layout_marginTop="12dp"/>
+        <TextView android:id="@+id/nutrition_heading" style="@style/NM.Heading" android:text="@string/nutrition" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/recipe_nutrition" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/recipe_notice" style="@style/NM.Caption" android:text="@string/estimate_notice" android:layout_marginTop="6dp"/>
+        <TextView android:id="@+id/ingredients_heading" style="@style/NM.Heading" android:text="@string/ingredients" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/recipe_ingredients" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/steps_heading" style="@style/NM.Heading" android:text="@string/preparation" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/recipe_steps" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/recipe_actions" style="@style/NM.Button" android:text="@string/view_actions"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/recipe_video" style="@style/NM.Outline" android:text="@string/view_video"/>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+  <include android:id="@+id/loading_overlay" layout="@layout/state_loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

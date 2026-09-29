@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="logo_nutrimaster" type="drawable">@drawable/ic_leaf</item>
+    <item name="perfil" type="drawable">@drawable/avatar</item>
+    <item name="receta1" type="drawable">@drawable/food_salad</item>
+    <item name="receta2" type="drawable">@drawable/food_oats</item>
+    <item name="receta3" type="drawable">@drawable/food_bowl</item>
+    <item name="receta4" type="drawable">@drawable/food_wrap</item>
+</resources>

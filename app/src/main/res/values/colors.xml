@@ -1,0 +1,15 @@
+<resources>
+    <color name="navy">#0B1932</color>
+    <color name="navy_light">#132D50</color>
+    <color name="blue">#194E91</color>
+    <color name="accent">#82C8F5</color>
+    <color name="ink">#112746</color>
+    <color name="muted">#53677D</color>
+    <color name="surface">#F3F6FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#DCE5EF</color>
+    <color name="pale_blue">#E7F0FB</color>
+    <color name="success">#116A56</color>
+    <color name="danger">#A42B38</color>
+    <color name="nav_text">#C2D4E8</color>
+</resources>

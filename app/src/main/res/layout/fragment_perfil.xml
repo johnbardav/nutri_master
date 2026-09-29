@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface">
+  <ScrollView android:id="@+id/scrollPerfil" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+      <TextView android:id="@+id/profile_title_eyebrow" style="@style/NM.Eyebrow" android:text="@string/profile_kicker"/>
+      <TextView android:id="@+id/profile_title_heading" style="@style/NM.Title" android:text="@string/perfil_titulo" android:layout_marginBottom="16dp"/>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_hero" android:padding="18dp" android:layout_marginBottom="16dp">
+        <ImageView android:id="@+id/imgPerfil" android:layout_width="88dp" android:layout_height="88dp" android:src="@drawable/perfil" android:scaleType="centerCrop" android:contentDescription="@string/perfil_foto" android:layout_marginBottom="14dp"/>
+        <TextView android:id="@+id/txtNombre" android:text="@string/perfil_nombre" style="@style/NM.Heading" android:textColor="@color/white"/>
+        <TextView android:id="@+id/profile_role" style="@style/NM.Body" android:textColor="@color/accent" android:layout_marginTop="4dp"/>
+      </LinearLayout>
+      <LinearLayout style="@style/NM.Card">
+        <TextView android:id="@+id/collection_heading" style="@style/NM.Heading" android:text="@string/collection_title"/>
+        <TextView android:id="@+id/profile_stats" style="@style/NM.Body" android:text="@string/profile_stats" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/profile_explore" style="@style/NM.Button" android:text="@string/explore_recipes"/>
+      </LinearLayout>
+      <LinearLayout style="@style/NM.Card">
+        <TextView android:id="@+id/bio_heading" style="@style/NM.Heading" android:text="@string/perfil_info_titulo"/>
+        <TextView android:id="@+id/txtInfoAdicional" android:text="@string/perfil_info" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/education_heading" style="@style/NM.Heading" android:text="@string/perfil_estudios_titulo" android:layout_marginTop="18dp"/>
+        <TextView android:id="@+id/txtEstudios" android:text="@string/perfil_estudios" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/experience_heading" style="@style/NM.Heading" android:text="@string/perfil_experiencia_titulo" android:layout_marginTop="18dp"/>
+        <TextView android:id="@+id/txtExperiencia" android:text="@string/perfil_experiencia" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+      </LinearLayout>
+      <com.google.android.material.button.MaterialButton android:id="@+id/edit_profile" style="@style/NM.Button" android:text="@string/edit_profile"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/change_photo" style="@style/NM.Outline" android:text="@string/change_photo"/>
+      <TextView android:id="@+id/profile_disclaimer" style="@style/NM.Caption" android:text="@string/profile_demo" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+  </ScrollView>
+  <include android:id="@+id/loading_overlay" layout="@layout/state_loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

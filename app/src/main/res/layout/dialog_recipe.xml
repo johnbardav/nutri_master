@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/recipe_edit_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+    <TextView android:id="@+id/edit_label_title" style="@style/NM.Caption" android:text="@string/recipe_name" android:labelFor="@id/edit_title"/>
+    <EditText android:id="@+id/edit_title" style="@style/NM.Input" android:inputType="textCapSentences" android:maxLength="2000"/>
+    <TextView android:id="@+id/edit_label_description" style="@style/NM.Caption" android:text="@string/recipe_description" android:labelFor="@id/edit_description"/>
+    <EditText android:id="@+id/edit_description" style="@style/NM.Input" android:inputType="textMultiLine" android:maxLength="2000"/>
+    <TextView android:id="@+id/edit_label_category" style="@style/NM.Caption" android:text="@string/category_label" android:labelFor="@id/edit_category"/>
+    <Spinner android:id="@+id/edit_category" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:padding="8dp" android:layout_marginTop="6dp" android:layout_marginBottom="10dp"/>
+    <TextView android:id="@+id/edit_label_minutes" style="@style/NM.Caption" android:text="@string/minutes" android:labelFor="@id/edit_minutes"/>
+    <EditText android:id="@+id/edit_minutes" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_servings" style="@style/NM.Caption" android:text="@string/base_servings" android:labelFor="@id/edit_servings"/>
+    <EditText android:id="@+id/edit_servings" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_kcal" style="@style/NM.Caption" android:text="@string/kcal" android:labelFor="@id/edit_kcal"/>
+    <EditText android:id="@+id/edit_kcal" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_protein" style="@style/NM.Caption" android:text="@string/protein" android:labelFor="@id/edit_protein"/>
+    <EditText android:id="@+id/edit_protein" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_carbs" style="@style/NM.Caption" android:text="@string/carbs" android:labelFor="@id/edit_carbs"/>
+    <EditText android:id="@+id/edit_carbs" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_fat" style="@style/NM.Caption" android:text="@string/fat" android:labelFor="@id/edit_fat"/>
+    <EditText android:id="@+id/edit_fat" style="@style/NM.Input" android:inputType="numberDecimal" android:digits="0123456789.,"/>
+    <TextView android:id="@+id/edit_label_ingredients" style="@style/NM.Caption" android:text="@string/ingredients" android:labelFor="@id/edit_ingredients"/>
+    <EditText android:id="@+id/edit_ingredients" style="@style/NM.Input" android:inputType="textMultiLine|textCapSentences" android:hint="@string/ingredients_hint" android:minLines="3" android:maxLength="12000" android:gravity="top"/>
+    <TextView android:id="@+id/edit_label_steps" style="@style/NM.Caption" android:text="@string/preparation" android:labelFor="@id/edit_steps"/>
+    <EditText android:id="@+id/edit_steps" style="@style/NM.Input" android:inputType="textMultiLine|textCapSentences" android:hint="@string/steps_hint" android:minLines="3" android:maxLength="12000" android:gravity="top"/>
+    <TextView android:id="@+id/edit_image_label" style="@style/NM.Caption" android:text="@string/image_label" android:labelFor="@id/edit_image"/>
+    <Spinner android:id="@+id/edit_image" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:padding="8dp" android:layout_marginTop="6dp" android:layout_marginBottom="10dp"/>
+    <TextView android:id="@+id/edit_error" style="@style/NM.Body" android:textColor="@color/danger" android:accessibilityLiveRegion="assertive" android:focusable="true" android:visibility="gone"/>
+  </LinearLayout>
+</ScrollView>

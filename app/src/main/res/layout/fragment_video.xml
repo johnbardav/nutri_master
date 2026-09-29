@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface">
+  <ScrollView android:id="@+id/video_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+      <TextView android:id="@+id/video_title_eyebrow" style="@style/NM.Eyebrow" android:text="@string/video_kicker"/>
+      <TextView android:id="@+id/video_title_heading" style="@style/NM.Title" android:text="@string/video_titulo" android:layout_marginBottom="16dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/video_select_recipe" style="@style/NM.Outline" android:text="@string/choose_recipe_in_gallery" android:layout_marginBottom="8dp"/>
+      <TextView android:id="@+id/video_recipe" style="@style/NM.Heading"/>
+      <TextView android:id="@+id/video_description" style="@style/NM.Caption" android:text="@string/video_notice" android:layout_marginTop="10dp" android:layout_marginBottom="12dp"/>
+      <FrameLayout android:layout_width="match_parent" android:layout_height="170dp" android:background="@color/navy">
+        <VideoView android:id="@+id/videoView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center"/>
+        <ProgressBar android:id="@+id/video_loading" android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center"/>
+      </FrameLayout>
+      <TextView android:id="@+id/video_state" style="@style/NM.Caption" android:text="@string/video_status" android:layout_marginTop="8dp" android:accessibilityLiveRegion="polite"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnReproducir" style="@style/NM.Button" android:text="@string/video_reproducir"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnPausar" style="@style/NM.Outline" android:text="@string/video_pausar"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/video_stop" style="@style/NM.Outline" android:text="@string/stop"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/video_import" style="@style/NM.Outline" android:text="@string/import_video"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/video_reset" style="@style/NM.Outline" android:text="@string/reset_video"/>
+      <LinearLayout style="@style/NM.Card">
+        <TextView android:id="@+id/video_steps_heading" style="@style/NM.Heading" android:text="@string/preparation"/>
+        <TextView android:id="@+id/video_steps" style="@style/NM.Body" android:layout_marginTop="10dp"/>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+  <include android:id="@+id/loading_overlay" layout="@layout/state_loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

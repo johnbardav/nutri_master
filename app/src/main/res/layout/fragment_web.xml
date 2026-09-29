@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface">
+  <ScrollView android:id="@+id/web_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+      <TextView android:id="@+id/web_title_eyebrow" style="@style/NM.Eyebrow" android:text="@string/web_kicker"/>
+      <TextView android:id="@+id/web_title_heading" style="@style/NM.Title" android:text="@string/web_titulo" android:layout_marginBottom="16dp"/>
+      <TextView android:id="@+id/url_label" style="@style/NM.Caption" android:text="@string/url_label" android:labelFor="@id/edtUrl"/>
+      <EditText android:id="@+id/edtUrl" android:text="@string/web_url_defecto" style="@style/NM.Input" android:inputType="textUri" android:hint="@string/web_hint" android:singleLine="true" android:imeOptions="actionGo"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnCargar" style="@style/NM.Button" android:text="@string/web_cargar"/>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton android:id="@+id/web_back" style="@style/NM.Outline" android:layout_width="0dp" android:layout_weight="1" android:text="@string/web_back"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/web_forward" style="@style/NM.Outline" android:layout_width="0dp" android:layout_weight="1" android:text="@string/web_forward"/>
+      </LinearLayout>
+      <com.google.android.material.button.MaterialButton android:id="@+id/web_home" style="@style/NM.Outline" android:text="@string/web_home"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/web_external" style="@style/NM.Outline" android:text="@string/web_external"/>
+      <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/web_javascript" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/javascript" android:textSize="13sp" android:textColor="@color/ink"/>
+      <TextView android:id="@+id/web_notice" style="@style/NM.Caption" android:text="@string/web_notice"/>
+      <TextView android:id="@+id/txtEstadoWeb" android:text="@string/web_estado_inicial" style="@style/NM.Caption" android:layout_marginTop="8dp" android:accessibilityLiveRegion="polite"/>
+      <ProgressBar android:id="@+id/web_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="4dp" android:max="100" android:layout_marginTop="8dp"/>
+      <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="480dp" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+  </ScrollView>
+  <include android:id="@+id/loading_overlay" layout="@layout/state_loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

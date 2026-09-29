@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface">
+  <ScrollView android:id="@+id/actions_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+      <TextView style="@style/NM.Eyebrow" android:text="@string/botones_demo_label"/>
+      <TextView style="@style/NM.Title" android:text="@string/botones_titulo" android:layout_marginBottom="12dp"/>
+      <LinearLayout style="@style/NM.Card">
+        <EditText android:id="@+id/edtReceta" style="@style/NM.Input" android:hint="@string/botones_hint" android:inputType="textCapSentences" android:maxLength="200" android:singleLine="true"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnMostrarReceta" style="@style/NM.Button" android:text="@string/botones_mostrar_receta"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnMostrarMensaje" style="@style/NM.Button" android:text="@string/botones_mostrar_mensaje"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnLimpiar" style="@style/NM.Outline" android:text="@string/botones_limpiar"/>
+        <TextView android:id="@+id/txtResultadoBotones" style="@style/NM.Body" android:text="@string/botones_resultado_inicial" android:layout_marginTop="12dp" android:accessibilityLiveRegion="polite"/>
+      </LinearLayout>
+      <TextView android:id="@+id/actions_title_eyebrow" style="@style/NM.Eyebrow" android:text="@string/actions_kicker"/>
+      <TextView android:id="@+id/actions_title_heading" style="@style/NM.Title" android:text="@string/actions_title" android:layout_marginBottom="16dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/actions_select_recipe" style="@style/NM.Outline" android:text="@string/choose_recipe_in_gallery" android:layout_marginBottom="8dp"/>
+      <TextView android:id="@+id/actions_recipe" style="@style/NM.Heading" android:layout_marginBottom="12dp"/>
+      <TextView android:id="@+id/actions_empty" style="@style/NM.Body" android:text="@string/choose_recipe" android:visibility="gone"/>
+      <LinearLayout android:id="@+id/recipe_actions_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout style="@style/NM.Card">
+          <com.google.android.material.button.MaterialButton android:id="@+id/save_recipe" style="@style/NM.Button" android:text="@string/save_recipe"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/favorite_recipe" style="@style/NM.Outline" android:text="@string/favorite_recipe"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/share_recipe" style="@style/NM.Outline" android:text="@string/share_recipe"/>
+        </LinearLayout>
+        <LinearLayout style="@style/NM.Card">
+          <TextView android:id="@+id/portions_heading" style="@style/NM.Heading" android:text="@string/portions_title"/>
+          <TextView android:id="@+id/portions_label" style="@style/NM.Caption" android:text="@string/portions_label" android:labelFor="@id/portions_input"/>
+          <EditText android:id="@+id/portions_input" style="@style/NM.Input" android:inputType="numberDecimal" android:hint="@string/portions_hint" android:digits="0123456789.,"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/calculate" style="@style/NM.Button" android:text="@string/calculate"/>
+          <TextView android:id="@+id/calorie_result" style="@style/NM.Body" android:layout_marginTop="12dp" android:accessibilityLiveRegion="polite"/>
+          <TextView android:id="@+id/calorie_notice" style="@style/NM.Caption" android:text="@string/calculation_info" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        <LinearLayout style="@style/NM.Card">
+          <TextView android:id="@+id/notes_heading" style="@style/NM.Heading" android:text="@string/notes_title"/>
+          <EditText android:id="@+id/recipe_notes" style="@style/NM.Input" android:inputType="textMultiLine|textCapSentences" android:hint="@string/notes_hint" android:minLines="3" android:maxLength="4000" android:gravity="top"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/save_notes" style="@style/NM.Outline" android:text="@string/save_notes"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/add_to_shopping" style="@style/NM.Outline" android:text="@string/add_ingredients"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/edit_recipe" style="@style/NM.Outline" android:text="@string/edit_recipe"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/delete_recipe" style="@style/NM.Outline" android:text="@string/delete_recipe"/>
+      </LinearLayout>
+      <LinearLayout style="@style/NM.Card">
+        <TextView android:id="@+id/shopping_heading" style="@style/NM.Heading" android:text="@string/shopping_title"/>
+        <TextView android:id="@+id/shopping_count" style="@style/NM.Body" android:layout_marginTop="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/open_shopping" style="@style/NM.Outline" android:text="@string/open_shopping"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/open_history" style="@style/NM.Outline" android:text="@string/open_history"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/export_data" style="@style/NM.Outline" android:text="@string/export_data"/>
+      </LinearLayout>
+      <TextView android:id="@+id/storage_notice" style="@style/NM.Caption" android:text="@string/storage_notice"/>
+    </LinearLayout>
+  </ScrollView>
+  <include android:id="@+id/loading_overlay" layout="@layout/state_loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

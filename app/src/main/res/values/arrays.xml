@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="categories"><item>Todas</item><item>Desayuno</item><item>Almuerzo</item><item>Cena</item><item>Snack</item></string-array>
+    <string-array name="recipe_categories"><item>Desayuno</item><item>Almuerzo</item><item>Cena</item><item>Snack</item></string-array>
+    <string-array name="collections"><item>Todas</item><item>Favoritas</item><item>Guardadas</item><item>Mis recetas</item></string-array>
+    <string-array name="image_names"><item>Bowl de vegetales</item><item>Avena y fruta</item><item>Tostada</item><item>Arroz y verduras</item><item>Sopa</item><item>Wrap</item><item>Ensalada</item><item>Yogur y fruta</item><item>Pasta</item></string-array>
+</resources>
